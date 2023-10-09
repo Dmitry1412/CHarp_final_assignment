@@ -4,6 +4,34 @@
 При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 */
 
+string[] firstArray = { "Hello", "Дима", "World", "487", "Компьютер", "ООП", "мир" };
+
+PrintArray(firstArray);
+Console.WriteLine();
+string[] secondArray = ReplaceString(firstArray);
+PrintArray(secondArray);
+
+string[] ReplaceString(string[] userString)
+{
+    string[] resultString = new string [userString.Length];
+    for (int i = 0; i < userString.Length; i++)
+    {
+        if (userString[i].Length > 3) resultString[i] = "";
+        else resultString[i] = userString[i];
+    }
+    return resultString;
+}
+
+void PrintArray(string[] array)
+{
+    foreach (var str in array) Console.Write($"{str} ");
+}
+
+
+
+
+
+/*
 string[] userArray = { "Hello", "Дима", "World", "487", "Компьютер", "ООП", "мир" };
 
 PrintArray(userArray);
@@ -23,3 +51,4 @@ void PrintArray(string[] array)
 {
     foreach (var str in array) Console.Write($"{str} ");
 }
+*/
